@@ -1,5 +1,6 @@
 package at.edu.c02.ledcontroller;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -56,7 +57,7 @@ public class ApiServiceImpl implements ApiService {
 
     @Override
     public JSONObject getLight(int id) throws IOException {
-        URL url = new URL("https://balanced-civet-91.hasura.app/api/rest/getLight/" + id);
+        URL url = new URL("https://balanced-civet-91.hasura.app/api/rest/lights/" + id);
         return sendApiRequest(url);
     }
 
@@ -79,4 +80,5 @@ public class ApiServiceImpl implements ApiService {
 
         return new JSONObject(sb.toString());
     }
+
 }

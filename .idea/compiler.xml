@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ledController" target="19" />
+      <module name="ledController" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
