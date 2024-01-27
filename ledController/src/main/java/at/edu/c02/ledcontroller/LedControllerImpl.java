@@ -32,6 +32,20 @@ public class LedControllerImpl implements LedController {
 
     @Override
     public JSONArray getGroupLeds() throws IOException {
-        return null;
+        // Rufen Sie die Liste aller LEDs auf
+        JSONObject response = apiService.getLights();
+        JSONArray allLeds = response.getJSONArray("lights");
+
+        // Erstellen Sie ein neues JSON-Array für die Gruppen-LEDs
+        JSONArray groupLeds = new JSONArray();
+
+        // Durchlaufen Sie alle LEDs und filtern Sie die Gruppen-LEDs heraus
+        for (int i = 0; i < allLeds.length(); i++) {
+            JSONObject led = allLeds.getJSONObject(i);
+            if (led.optBoolean("isGroupLed")) { // Hier wird geprüft, ob die LED zur Gruppe gehört
+                groupLeds.put(led);
+            }
+        }
+        return groupLeds;
     }
 }
