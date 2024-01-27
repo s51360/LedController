@@ -4,3 +4,29 @@ Sprint Planning: 08:55
 
 - Christoph: 1.2
 - Lisa: Documentation + 1.2
+
+Epic 1
+Story 1.1:
+- ApiService erweitern um getLight(id) -Methode, die den Status einer spezifischen LED abruft
+    Methode getLight hinzugefügt
+- ApiServiceImpl dabei refactoren, sodass gemeinsamer Code in eine Methode ausgelagert wird
+    Methode hinzugefügt und Methode erweitert
+- Keine Code-Duplication zwischen getLights() und getLight(id)
+
+
+
+
+
+Story 1.2:
+- LedController erweitern um getGroupLeds() -Methode, die ein Array aus allen LED-Status der Gruppen-LEDs zurückgibt
+    Methode getGroupLeds hinzugefügt
+- Test hinzufügen, der den ApiService mocked und prüft, dass getGroupLeds() die korrekten Methoden aufruft
+- In den Tests sollen keine API-Calls zum tatsächlichen Server gesendet werden!
+
+Daily 09:13
+- Technische Problem wurden teilweise noch nicht behoben (Git)
+- Story 1.1: gestartet und Implementierung begonnen
+- Story 1.2: Terminkollision und Verzögerung beim Bearbeitungsstart
+
+
+
