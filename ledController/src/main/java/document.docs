@@ -53,4 +53,12 @@ Daily 11:02
 - Fehlerrecherche noch nicht abgeschlossen
 - alles weitere zurzeit auf Eis :)
 
+Sprintretro 11:22
+- Rücksprache mit Projektleiter Mattis, Fehler extrahieren können.
+- Fehler aufarbeiten und eine Lösung implementieren.
+- Fehlerursache, es wurde auf das ganze Array zugegriffen und nicht auf die einzelnen Elemente des Arrays.
+
+
+
+
 
