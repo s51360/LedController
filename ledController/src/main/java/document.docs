@@ -15,13 +15,13 @@ Story 1.1:
 
 
 
-
-
 Story 1.2:
 - LedController erweitern um getGroupLeds() -Methode, die ein Array aus allen LED-Status der Gruppen-LEDs zurückgibt
     Methode getGroupLeds hinzugefügt
 - Test hinzufügen, der den ApiService mocked und prüft, dass getGroupLeds() die korrekten Methoden aufruft
+    Test hinzugefügt
 - In den Tests sollen keine API-Calls zum tatsächlichen Server gesendet werden!
+
 
 Daily 09:13
 - Technische Problem wurden teilweise noch nicht behoben (Git)
