@@ -13,6 +13,7 @@ Story 1.1:
     Methode hinzugefügt und Methode erweitert
 - Keine Code-Duplication zwischen getLights() und getLight(id)
 - Zusätzlicher Test hinzugefügt, damit man testen kann
+- Alles Tasks abgeschlossen
 
 
 
@@ -65,6 +66,8 @@ Sprintplanning 12:12
 Daily 12:32
 - Struktur der Auswertung in Überarbeitung
 - alles weitere zurzeit auf Eis :)
+
+Daily
 
 
 
