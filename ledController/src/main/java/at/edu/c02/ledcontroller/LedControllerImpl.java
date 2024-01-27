@@ -3,6 +3,7 @@ package at.edu.c02.ledcontroller;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+
 import java.io.IOException;
 
 /**
@@ -30,22 +31,22 @@ public class LedControllerImpl implements LedController {
         System.out.println("First light color is: " + firstLight.getString("color"));
     }
 
+
+
     @Override
     public JSONArray getGroupLeds() throws IOException {
 
         JSONObject response = apiService.getLights();
         JSONArray allLeds = response.getJSONArray("lights");
-
-
         JSONArray groupLeds = new JSONArray();
-
 
         for (int i = 0; i < allLeds.length(); i++) {
             JSONObject led = allLeds.getJSONObject(i);
-            if (led.optBoolean("isGroupLed")) {
+            if (led.has("groupByGroup") && !led.isNull("groupByGroup")) {
                 groupLeds.put(led);
             }
         }
         return groupLeds;
+
     }
 }
