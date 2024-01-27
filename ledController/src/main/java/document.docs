@@ -67,7 +67,28 @@ Daily 12:32
 - Struktur der Auswertung in Überarbeitung
 - alles weitere zurzeit auf Eis :)
 
-Daily
+Daily 12:52
+- Story 1.1 wurde abgeschlossen
+- Story 1.2: Funktion soweit fertig, dass wir die Daten erheben können.
+  Wir sind dabei, dass die Darstellung der Daten feinst säuberlich abgewickelt wird.
+
+Sprintretro 13:12
+- 1.1 Fehler gefunden und abgeschlossen
+- 1.2 soweit funktionstüchtig aber noch nicht fertig
+- 1.3 leider nicht geschafft :(
+
+Sprintplanning 13:27
+- SecretKey anfordern
+- Task 2.1 damit ein LED leuchtet ;)
+
+Daily 13:48
+- erstellen des PUT-Streams, um die LED Farbe zu ändern
+
+Daily 14:08
+- 2.1 abgeschlossen :D
+- weitere Implementierung folgt
+
+
 
 
 
