@@ -12,12 +12,13 @@ Story 1.1:
 - ApiServiceImpl dabei refactoren, sodass gemeinsamer Code in eine Methode ausgelagert wird
     Methode hinzugefügt und Methode erweitert
 - Keine Code-Duplication zwischen getLights() und getLight(id)
+- Zusätzlicher Test hinzugefügt, damit man testen kann
 
 
 
 Story 1.2:
 - LedController erweitern um getGroupLeds() -Methode, die ein Array aus allen LED-Status der Gruppen-LEDs zurückgibt
-    Methode getGroupLeds hinzugefügt
+    Methode getGroupLeds hinzugefügt/implementiert
 - Test hinzufügen, der den ApiService mocked und prüft, dass getGroupLeds() die korrekten Methoden aufruft
     Test hinzugefügt
 - In den Tests sollen keine API-Calls zum tatsächlichen Server gesendet werden!
@@ -36,6 +37,11 @@ Daily 09:34
   Userstory knapp gehalten.
   Keine Infos, wie man konkret Sachen macht.
 - Story 1.2: Probleme mit der Projektübersicht
+
+Springreview
+- Technische Probleme haben uns bei der Bearbeitung extrem nach hinten geworfen.
+- Story 1.1: GroupStatus, Test schreiben, fehlgeschlagene Tests während Kommunikation mit API
+- Story 1.2: getGroupLed implementiert konnte aber nicht getestet werden
 
 
 
