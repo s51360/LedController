@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public interface LedController {
     void demo() throws IOException;
+    void setLight() throws IOException;
     JSONArray getGroupLeds() throws IOException;
 
 }

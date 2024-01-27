@@ -27,6 +27,8 @@ public class Main {
             else if(input.equalsIgnoreCase("group"))
             {
                 System.out.println(ledController.getGroupLeds());
+            } else if (input.equalsIgnoreCase("setLight")) {
+                ledController.setLight();
             }
         }
     }

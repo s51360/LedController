@@ -31,6 +31,19 @@ public class LedControllerImpl implements LedController {
         System.out.println("First light color is: " + firstLight.getString("color"));
     }
 
+    @Override
+    public void setLight() throws IOException
+    {
+        // Call `getLights`, the response is a json object in the form `{ "lights": [ { ... }, { ... } ] }`
+        //apiService.setLight("#f00",true, 56);
+
+        //54 - 61
+
+        for (int i = 54; i <= 61; i=i+2) {
+            apiService.setLight("#f00",true, i);
+        }
+    }
+
 
 
     @Override
