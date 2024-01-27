@@ -56,6 +56,27 @@ public class ApiServiceImpl implements ApiService {
 
     @Override
     public JSONObject getLight(int id) throws IOException {
-        return null;
+        URL url = new URL("https://balanced-civet-91.hasura.app/api/rest/getLight/" + id);
+        return sendApiRequest(url);
+    }
+
+    private JSONObject sendApiRequest(URL url) throws IOException {
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        connection.setRequestProperty("X-Hasura-Group-ID", "Todo");
+
+        int responseCode = connection.getResponseCode();
+        if (responseCode != HttpURLConnection.HTTP_OK) {
+            throw new IOException("Fehler: Anfrage fehlgeschlagen mit Antwortcode " + responseCode);
+        }
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        StringBuilder sb = new StringBuilder();
+        int character;
+        while ((character = reader.read()) != -1) {
+            sb.append((char) character);
+        }
+
+        return new JSONObject(sb.toString());
     }
 }
