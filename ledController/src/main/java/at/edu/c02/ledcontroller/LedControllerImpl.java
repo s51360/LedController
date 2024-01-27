@@ -32,6 +32,20 @@ public class LedControllerImpl implements LedController {
 
     @Override
     public JSONArray getGroupLeds() throws IOException {
-        return null;
+
+        JSONObject response = apiService.getLights();
+        JSONArray allLeds = response.getJSONArray("lights");
+
+
+        JSONArray groupLeds = new JSONArray();
+
+
+        for (int i = 0; i < allLeds.length(); i++) {
+            JSONObject led = allLeds.getJSONObject(i);
+            if (led.optBoolean("isGroupLed")) {
+                groupLeds.put(led);
+            }
+        }
+        return groupLeds;
     }
 }
