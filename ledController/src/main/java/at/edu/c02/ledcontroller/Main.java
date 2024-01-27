@@ -17,11 +17,16 @@ public class Main {
         {
             System.out.println("=== LED Controller ===");
             System.out.println("Enter 'demo' to send a demo request");
+            System.out.println("Enter 'group' to send a group request");
             System.out.println("Enter 'exit' to exit the program");
             input = reader.readLine();
             if(input.equalsIgnoreCase("demo"))
             {
                 ledController.demo();
+            }
+            else if(input.equalsIgnoreCase("group"))
+            {
+                System.out.println(ledController.getGroupLeds());
             }
         }
     }
